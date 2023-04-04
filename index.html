@@ -17,27 +17,29 @@
         <div class="logo">
             <img class="img-trees" alt="Trees" src="images/trees.jpg">
             <div class="logo-name-background"></div>
-            <div class="sign-up-title">Chase Dev 7</div>
+            <div class="sign-up-title">
+                <img class="odin-image" src="images/odin-lined.png">
+                <p class="chase-title">ChaseDev7</p>
+            </div>
             <div class="image-credit">Photo by <a href="https://unsplash.com/@mariajose1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maria Jose Oyarzun</a> on <a href="https://unsplash.com/photos/f2rfUtBzAAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
         </div>
         <div class="sign-up-screen">
             <div class="sign-up-text">
-                <p>This is fake and not a working form! Sign up anyway! You won't regret it! I promise! Again, this is not a real form! It's fake! Sign up below!</p>
+                <p>This is fake and not a real working service! This is not a real form! Sign up anyway! You won't regret it! I promise! Again, this is not a real form! It's fake! Sign up below!</p>
                 <p>You <i>know</i> you want to.</p>
             </div>
             <div class="form-container">
-                <p>Let's go!!</p>
                 <form>
                     <div class="sign-up-item">
                         <label for="first-name">FIRST NAME</label>
                         <div>
-                            <input type="text" id="first-name">
+                            <input type="text" id="first-name" pattern="[a-z]{1,20}" title="First name should only contain letters; the maximum limit is 20 letters">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="last-name">LAST NAME</label>
                         <div>
-                            <input type="text" id="last-name">
+                            <input type="text" id="last-name" pattern="[a-z]{1,20}" title="Last name should only contain letters; the maximum limit is 20 letters">
                         </div>
                     </div>
                     <div class="sign-up-item">
@@ -55,13 +57,13 @@
                     <div class="sign-up-item">
                         <label for="password">PASSWORD</label>
                         <div>
-                            <input type="password" id="password">
+                            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="password">PASSWORD</label>
                         <div>
-                            <input type="password" id="password">
+                            <input pattern=".{8,}" type="password" id="password">
                         </div>
                     </div>
                 </form>
