@@ -29,47 +29,47 @@
                 <p>You <i>know</i> you want to.</p>
             </div>
             <div class="form-container">
-                <form>
+                <form action="https://httpbin.org/post" method="post" id="sign-up-form">
                     <div class="sign-up-item">
                         <label for="first-name">FIRST NAME</label>
                         <div>
-                            <input type="text" id="first-name" pattern="[a-z]{1,20}" title="First name should only contain letters; the maximum limit is 20 letters">
+                            <input type="text" id="first-name" name="first-name" pattern="[a-z]{1,20}">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="last-name">LAST NAME</label>
                         <div>
-                            <input type="text" id="last-name" pattern="[a-z]{1,20}" title="Last name should only contain letters; the maximum limit is 20 letters">
+                            <input type="text" id="last-name" name="last-name" pattern="[a-z]{1,20}">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="email">EMAIL</label>
                         <div>
-                            <input type="email" id="email">
+                            <input type="email" id="email" name="email">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="phone-number">PHONE NUMBER</label>
                         <div>
-                            <input type="tel" id="phone-number" maxlength="10">
+                            <input type="tel" id="phone-number" name="phone-number" maxlength="10">
                         </div>
                     </div>
                     <div class="sign-up-item">
                         <label for="password">PASSWORD</label>
                         <div>
-                            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password">
+                            <input pattern=".{8,}" type="password" id="password" name="password">
                         </div>
                     </div>
                     <div class="sign-up-item">
-                        <label for="password">PASSWORD</label>
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
                         <div>
-                            <input pattern=".{8,}" type="password" id="password">
+                            <input pattern=".{8,}" type="password" id="confirm-password" name="confirm-password">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="sign-up-button">
-                <button class="create-account-button">Create Account</button>
+                <button type="submit" form="sign-up-form" value="Submit" class="create-account-button">Create Account</button>
             </div>
             <div class="user-login">
                 <p>Already have an account? <span class="login-text">Log in</span></p>
